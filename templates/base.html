@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}SCUDOdoc — Ion Plasma Mask Filter Technology{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}SCUDOdoc is replacing 100-year-old mechanical mask technology with a novel digitally controlled Ion Plasma active-filter. It eliminates the core pain points of modern medical masks — fatigue, heat, moisture, and poor patient interaction — while delivering superior infection protection and eliminating millions of hazardous disposable masks trashed each year.{% endblock %}" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SCUDOdoc — Ion Plasma Mask Filter Technology" />
+  <meta property="og:description" content="Replacing 100-year-old mechanical mask technology with Ion Plasma active-filter." />
+  <meta property="og:type" content="website" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:     '#1ABC9C',
+            'primary-dark': '#16a085',
+            secondary:   '#2E86AB',
+            scudo: {
+              teal: '#1ABC9C',
+              blue: '#2E86AB',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- Confidential Banner -->
+  <div class="bg-amber-50 border-b border-amber-200 text-center py-1.5 px-4 text-xs text-amber-700 font-medium tracking-wide">
+    Confidential — For qualified investors only
+  </div>
+
+  <!-- Sticky Navigation -->
+  <nav id="navbar" class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="{{ url_for('index') }}" class="flex items-center flex-shrink-0">
+          <img src="{{ url_for('static', filename='images/logo.png') }}"
+               alt="SCUDOdoc" class="h-10 w-auto" />
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="{{ url_for('technology') }}" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Technology</a>
+          <a href="{{ url_for('esg') }}" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">ESG Impact</a>
+          <a href="{{ url_for('market') }}" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Market</a>
+          <a href="{{ url_for('index') }}#team" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Team</a>
+          <a href="{{ url_for('contact') }}" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Contact</a>
+          <a href="mailto:benny@scudodoc.com"
+             class="ml-2 inline-flex items-center px-4 py-2 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-colors shadow-sm">
+            Get in Touch &rarr;
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-btn" class="md:hidden p-2 rounded-md text-gray-600 hover:text-primary focus:outline-none" aria-label="Toggle menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+      <a href="{{ url_for('technology') }}" class="block text-sm font-medium text-gray-700 hover:text-primary py-1">Technology</a>
+      <a href="{{ url_for('esg') }}" class="block text-sm font-medium text-gray-700 hover:text-primary py-1">ESG Impact</a>
+      <a href="{{ url_for('market') }}" class="block text-sm font-medium text-gray-700 hover:text-primary py-1">Market</a>
+      <a href="{{ url_for('index') }}#team" class="block text-sm font-medium text-gray-700 hover:text-primary py-1">Team</a>
+      <a href="{{ url_for('contact') }}" class="block text-sm font-medium text-gray-700 hover:text-primary py-1">Contact</a>
+      <a href="mailto:benny@scudodoc.com"
+         class="block w-full text-center px-4 py-2 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-colors mt-2">
+        Get in Touch &rarr;
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="text-center mb-10">
+        <p class="text-2xl font-light text-gray-300 leading-relaxed max-w-2xl mx-auto">
+          Finally, after 100 Years...<br />
+          <span class="text-white font-semibold">Our medical care givers can breathe — freely &amp; safely</span>
+        </p>
+        <div class="mt-4 space-y-1 text-gray-400 text-sm">
+          <p>Will provide better service</p>
+          <p>Will not add to global pollution</p>
+          <p>Will not be impacted by geopolitical or pandemic crises</p>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="SCUDOdoc" class="h-8 w-auto opacity-80" />
+          <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+            <a href="{{ url_for('index') }}" class="hover:text-primary transition-colors">Home</a>
+            <a href="{{ url_for('technology') }}" class="hover:text-primary transition-colors">Technology</a>
+            <a href="{{ url_for('esg') }}" class="hover:text-primary transition-colors">ESG Impact</a>
+            <a href="{{ url_for('market') }}" class="hover:text-primary transition-colors">Market</a>
+            <a href="{{ url_for('contact') }}" class="hover:text-primary transition-colors">Contact</a>
+          </div>
+        </div>
+        <div class="mt-6 text-center text-xs text-gray-500 space-y-1">
+          <p>&copy; 2026 SCUDO. All rights reserved.</p>
+          <p>Confidential — For qualified investors only</p>
+          <p>Contact: Benny Shoham, Founder &amp; CEO &mdash; <a href="mailto:benny@scudodoc.com" class="hover:text-primary transition-colors">benny@scudodoc.com</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>
