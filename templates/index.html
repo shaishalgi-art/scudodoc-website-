@@ -1,1 +1,146 @@
-{% extends 'base.html' %}{% block content %}<p>index</p>{% endblock %}
+{% extends "base.html" %}
+
+{% block title %}SCUDOdoc — A Paradigm Shift in Medical PPE{% endblock %}
+
+{% block content %}
+
+<!-- ══════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════ -->
+<section class="relative overflow-hidden bg-gradient-to-br from-white to-teal-50 min-h-[90vh] flex items-center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: Text -->
+      <div class="fade-in">
+        <div class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-6 tracking-wide uppercase">
+          Ion Plasma Technology &middot; ESG-Aligned
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+          A Paradigm Shift in Medical<br />
+          <span class="text-primary">Personal Protective Equipment</span>
+        </h1>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-xl">
+          SCUDOdoc is replacing 100-year-old mechanical mask technology with a novel digitally controlled Ion Plasma active-filter. It eliminates fatigue, heat, moisture, and poor patient interaction — while delivering superior infection protection and eliminating millions of hazardous disposable masks trashed each year.
+        </p>
+
+        <!-- Stat counters -->
+        <div class="grid grid-cols-3 gap-6 mb-10">
+          <div class="text-center">
+            <div class="text-3xl font-extrabold text-primary">
+              <span class="counter-value" data-counter data-target="93.6" data-decimals="1" data-suffix="%">0%</span>
+            </div>
+            <div class="text-xs text-gray-500 mt-1 leading-tight">PM2.5 Filtration<br />Efficiency</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-extrabold text-primary">
+              <span class="counter-value" data-counter data-target="10000" data-suffix="">0</span>
+            </div>
+            <div class="text-xs text-gray-500 mt-1 leading-tight">Masks Replaced<br />Per Device (5yr)</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-extrabold text-primary">
+              <span class="counter-value" data-counter data-prefix="€" data-target="3" data-decimals="1" data-suffix="B">€0B</span>
+            </div>
+            <div class="text-xs text-gray-500 mt-1 leading-tight">Global Phase I<br />TAM</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="mailto:benny@scudodoc.com"
+             class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-colors shadow-md">
+            Connect with the Team &rarr;
+          </a>
+          <a href="{{ url_for('technology') }}"
+             class="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors">
+            Learn the Technology
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Product image -->
+      <div class="fade-in flex justify-center lg:justify-end relative">
+        <img src="{{ url_for('static', filename='images/hero-mask.jpeg') }}"
+             alt="SCUDOdoc Ion Plasma Mask"
+             class="w-full max-w-md rounded-2xl shadow-2xl object-cover" />
+        <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-3 border border-gray-100">
+          <div class="flex items-center gap-2">
+            <div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+            <span class="text-xs font-semibold text-gray-700">NAI Protection Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-400 text-xs gap-1">
+      <span>Scroll</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     THE PROBLEM SECTION
+══════════════════════════════════════════ -->
+<section id="problem" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+      <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-3">The Problem</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Why 100-Year-Old Technology Still Dominates</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="fade-in bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-3xl mb-4">😮‍💨</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Fatigue &amp; Discomfort</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Heat and moisture buildup cause exhaustion, reducing clinical concentration and patient care quality.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="fade-in bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-3xl mb-4">🗣️</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Poor Patient Interaction</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Masks obstruct vocal clarity and facial visibility, degrading doctor-patient interaction quality.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="fade-in bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-3xl mb-4">⚠️</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Mediocre Protection</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          N95: only <strong>60%</strong> actual on-face filtering. KN95: <strong>48.3%</strong>. Surgical: as low as <strong>10–15%</strong> — despite 95%+ lab certification.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="fade-in bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-3xl mb-4">💶</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">High Ongoing Costs</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Private GP/dental clinics spend <strong>€500–€1,000/year</strong> on over 2,000 disposable masks per doctor-assistant pair.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="fade-in bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-3xl mb-4">🌍</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Massive ESG Failure</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">~4 billion masks/year from GP &amp; dental clinics alone — 100% non-recyclable, classified hazardous (DASRI), persisting 450+ years as microplastics.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="fade-in bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="text-3xl mb-4">🚢</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Supply Chain Vulnerability</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">EU imports 70%, USA 90% of medical masks from China. Geopolitical risk, tariffs (US 25–54%), and EU Reg. 2025/1197 make this dependency untenable.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
