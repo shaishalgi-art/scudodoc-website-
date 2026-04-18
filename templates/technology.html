@@ -1,1 +1,159 @@
-{% extends 'base.html' %}{% block content %}<p>technology</p>{% endblock %}
+{% extends "base.html" %}
+
+{% block title %}Technology — SCUDOdoc Ion Plasma Mask Filter{% endblock %}
+{% block meta_description %}Learn how SCUDOdoc's Ion Plasma active-filter delivers 93.6% PM2.5 filtration efficiency, eliminating mask fatigue while protecting against SARS-CoV-2, Influenza, RSV and more.{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="py-20 bg-gradient-to-br from-teal-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-3">The Technology</div>
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Ion Plasma Mask Filter Technology</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Natural Breathing with Superior Real-Protection vs. N95/FFP Masks</p>
+  </div>
+</section>
+
+<!-- Product Video -->
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="rounded-2xl overflow-hidden shadow-xl bg-gray-900">
+      <video controls class="w-full" poster="{{ url_for('static', filename='images/hero-mask.jpeg') }}">
+        <source src="{{ url_for('static', filename='images/product-video.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- NAI Science -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-in">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-6">NAI Active Filtering &amp; Disinfection</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Negative Air Ions (NAI) are naturally produced by trees, waterfalls, and ocean waves — known in Japan as <strong>Forest Bath</strong> (Shin-rin-yoku 森林浴). In these environments, NAI concentrations of 1,000–2,000 ions/cm³ are common. SCUDOdoc generates controlled NAI densities orders of magnitude higher — sufficient to neutralise airborne pathogens on contact.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Unlike mechanical filtration (which relies on physical barriers with known bypass), Ion Plasma actively disinfects the air stream. Pathogens are charged and deactivated — not just trapped.
+        </p>
+        <div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+          <h3 class="font-bold text-gray-900 mb-2">POC Prototype Results</h3>
+          <div class="flex gap-8">
+            <div>
+              <div class="text-2xl font-extrabold text-primary">93.6%</div>
+              <div class="text-xs text-gray-500">SCUDOdoc Prototype</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-gray-400">71.6%</div>
+              <div class="text-xs text-gray-500">N95 Mask</div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">Test conditions: 3× EPA-allowed clinic pollution levels</p>
+        </div>
+      </div>
+      <div class="fade-in">
+        <img src="{{ url_for('static', filename='images/wear-shot-2.png') }}"
+             alt="SCUDOdoc device worn"
+             class="rounded-2xl shadow-lg w-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Virus Efficacy Table -->
+<section class="py-16 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-4 text-center">Pathogen Disinfection Efficacy</h2>
+    <p class="text-center text-gray-600 mb-10">Peer-reviewed evidence for NAI disinfection across key pathogens</p>
+
+    <div class="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+      <table class="responsive-table w-full text-sm">
+        <thead>
+          <tr class="bg-primary/5">
+            <th class="text-left p-4 font-semibold text-gray-700">Pathogen</th>
+            <th class="text-left p-4 font-semibold text-gray-700">Type</th>
+            <th class="text-left p-4 font-semibold text-gray-700">NAI Disinfection</th>
+            <th class="text-left p-4 font-semibold text-gray-700">Evidence</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr>
+            <td data-label="Pathogen" class="p-4 font-medium text-gray-900">SARS-CoV-2</td>
+            <td data-label="Type" class="p-4 text-gray-600">Enveloped</td>
+            <td data-label="NAI Disinfection" class="p-4 font-bold text-primary">Up to 99.9% reduction</td>
+            <td data-label="Evidence" class="p-4 text-gray-500">Ionized air chamber studies</td>
+          </tr>
+          <tr class="bg-gray-50/50">
+            <td data-label="Pathogen" class="p-4 font-medium text-gray-900">Influenza A (H3N2)</td>
+            <td data-label="Type" class="p-4 text-gray-600">Enveloped</td>
+            <td data-label="NAI Disinfection" class="p-4 font-bold text-primary">Up to 99.8% reduction</td>
+            <td data-label="Evidence" class="p-4 text-gray-500">Animal model studies</td>
+          </tr>
+          <tr>
+            <td data-label="Pathogen" class="p-4 font-medium text-gray-900">RSV</td>
+            <td data-label="Type" class="p-4 text-gray-600">Enveloped</td>
+            <td data-label="NAI Disinfection" class="p-4 font-bold text-primary">Up to 98% reduction</td>
+            <td data-label="Evidence" class="p-4 text-gray-500">Chamber studies</td>
+          </tr>
+          <tr class="bg-gray-50/50">
+            <td data-label="Pathogen" class="p-4 font-medium text-gray-900">Common Cold</td>
+            <td data-label="Type" class="p-4 text-gray-600">Non-Enveloped</td>
+            <td data-label="NAI Disinfection" class="p-4 font-bold text-primary">81–99% reduction</td>
+            <td data-label="Evidence" class="p-4 text-gray-500">MS2 bacteriophage studies</td>
+          </tr>
+          <tr>
+            <td data-label="Pathogen" class="p-4 font-medium text-gray-900">Pollen &amp; PM2.5</td>
+            <td data-label="Type" class="p-4 text-gray-600">Particles</td>
+            <td data-label="NAI Disinfection" class="p-4 font-bold text-primary">80–95% removal</td>
+            <td data-label="Evidence" class="p-4 text-gray-500">Clinical pollen trials</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Product Platform Variants -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-4 text-center">A Platform Supporting Various Medical Use Cases</h2>
+    <p class="text-center text-gray-600 mb-10">Five product configurations designed for different clinical needs</p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 fade-in">
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
+        <div class="w-16 h-16 bg-primary/10 rounded-xl mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <p class="text-sm font-semibold text-gray-900">Basic Mask</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
+        <div class="w-16 h-16 bg-primary/10 rounded-xl mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <p class="text-sm font-semibold text-gray-900">Eye Protection Visor</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
+        <div class="w-16 h-16 bg-primary/10 rounded-xl mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <p class="text-sm font-semibold text-gray-900">Insert Eye Glass</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
+        <div class="w-16 h-16 bg-primary/10 rounded-xl mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <p class="text-sm font-semibold text-gray-900">Clip-on Magnifier</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
+        <div class="w-16 h-16 bg-primary/10 rounded-xl mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <p class="text-sm font-semibold text-gray-900">Eye Glass Friendly</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
