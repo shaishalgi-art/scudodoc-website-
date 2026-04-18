@@ -218,13 +218,11 @@
           Explore the full science &rarr;
         </a>
       </div>
-      <div class="grid grid-cols-2 gap-4">
-        <img src="{{ url_for('static', filename='images/wear-shot-1.png') }}"
-             alt="SCUDOdoc worn — front view"
-             class="rounded-xl shadow-md object-cover w-full h-48" />
-        <img src="{{ url_for('static', filename='images/wear-shot-2.png') }}"
-             alt="SCUDOdoc worn — side view"
-             class="rounded-xl shadow-md object-cover w-full h-48" />
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <video class="w-full" autoplay muted loop playsinline
+               poster="{{ url_for('static', filename='images/hero-mask.jpeg') }}">
+          <source src="{{ url_for('static', filename='images/product-video.mp4') }}" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
@@ -446,42 +444,6 @@
   </div>
 </section>
 
-
-<!-- ══════════════════════════════════════════
-     TEAM SECTION
-══════════════════════════════════════════ -->
-<section id="team" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 fade-in">
-      <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-3">The Team</div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Built by Experienced Founders</h2>
-    </div>
-
-    <div class="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-
-      <!-- Benny -->
-      <div class="fade-in bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
-        <img src="{{ url_for('static', filename='images/benny.png') }}"
-             alt="Benny Shoham"
-             class="w-24 h-24 rounded-full object-cover mx-auto mb-4 ring-4 ring-primary/20" />
-        <h3 class="text-lg font-bold text-gray-900">Benny Shoham</h3>
-        <p class="text-primary text-sm font-medium mb-3">Founder &amp; CEO</p>
-        <p class="text-gray-600 text-sm leading-relaxed">BSc Electronic Engineering · Executive MBA · Serial entrepreneur, inventor (&gt;25 patents) · 3rd startup as co-founding CEO. Core NAI technology based on hands-on experience leading engineering team that developed NAI-based COVID-blocking solutions.</p>
-      </div>
-
-      <!-- Shai -->
-      <div class="fade-in bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
-        <img src="{{ url_for('static', filename='images/shai.png') }}"
-             alt="Shai Rubanenko Shalgi"
-             class="w-24 h-24 rounded-full object-cover mx-auto mb-4 ring-4 ring-primary/20" />
-        <h3 class="text-lg font-bold text-gray-900">Shai Rubanenko Shalgi</h3>
-        <p class="text-primary text-sm font-medium mb-3">COO &amp; AI Lead</p>
-        <p class="text-gray-600 text-sm leading-relaxed">MSc European Studies, LSE · M.A. Human Rights, Hebrew University · AI &amp; Automation, Hebrew University. Led national-scale digital transformation at EY Advisory. Experience across government, technology, and international organisations.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
 <!-- ══════════════════════════════════════════

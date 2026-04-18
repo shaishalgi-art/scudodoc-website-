@@ -53,10 +53,11 @@
           <p class="text-xs text-gray-500 mt-2">Test conditions: 3× EPA-allowed clinic pollution levels</p>
         </div>
       </div>
-      <div class="fade-in">
-        <img src="{{ url_for('static', filename='images/wear-shot-2.png') }}"
-             alt="SCUDOdoc device worn"
-             class="rounded-2xl shadow-lg w-full object-cover" />
+      <div class="fade-in rounded-2xl overflow-hidden shadow-lg">
+        <video class="w-full" autoplay muted loop playsinline
+               poster="{{ url_for('static', filename='images/hero-mask.jpeg') }}">
+          <source src="{{ url_for('static', filename='images/product-video.mp4') }}" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
