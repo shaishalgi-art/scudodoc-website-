@@ -1,1 +1,105 @@
-{% extends 'base.html' %}{% block content %}<p>esg</p>{% endblock %}
+{% extends "base.html" %}
+
+{% block title %}ESG Impact — SCUDOdoc{% endblock %}
+{% block meta_description %}SCUDOdoc eliminates 10,000 disposable masks per clinic over 5 years, saving 2,137 kg CO₂-eq and preventing 3.6 kg of microplastics. Learn about our ECO SCUDO program.{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="py-20 bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Environmental &amp; Social Impact</div>
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">ECO SCUDO</h1>
+    <p class="text-xl text-gray-300 max-w-2xl mx-auto">Reducing Medical Mask Waste — One Clinic at a Time</p>
+  </div>
+</section>
+
+<!-- Impact Stats -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16 fade-in">
+      <div class="text-center">
+        <div class="text-5xl font-extrabold text-primary mb-2">
+          <span class="counter-value" data-counter data-target="10000">0</span>
+        </div>
+        <div class="text-sm text-gray-500 leading-tight">Masks eliminated<br />per clinic (5yr)</div>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl font-extrabold text-primary mb-2">
+          <span class="counter-value" data-counter data-target="2137">0</span><span class="text-2xl"> kg</span>
+        </div>
+        <div class="text-sm text-gray-500 leading-tight">CO₂-eq saved<br />(≡ 9,200 km not driven)</div>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl font-extrabold text-primary mb-2">
+          <span class="counter-value" data-counter data-target="3.6" data-decimals="1">0</span><span class="text-2xl"> kg</span>
+        </div>
+        <div class="text-sm text-gray-500 leading-tight">Microplastics<br />prevented</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-extrabold text-primary mb-2">
+          &gt;<span class="counter-value" data-counter data-target="1.26" data-decimals="2">0</span><span class="text-2xl">B</span>
+        </div>
+        <div class="text-sm text-gray-500 leading-tight">Masks avoided/yr<br />@15% EU Phase I adoption</div>
+      </div>
+    </div>
+
+    <!-- ECO-Social Program -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 fade-in">
+      <div>
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-4">The ECO-Social Program</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Each year, clinics upgrade to a new locally manufactured SCUDO mask. Returned devices aren't discarded — they're fully refurbished and donated to clinics in low-income countries, extending their impact far beyond Europe.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          By switching to SCUDO, a single clinic saves the equivalent of <strong>9,200 km not driven</strong> in CO₂ emissions and prevents <strong>3.6 kg of microplastics</strong> from entering the environment — per 5-year device cycle.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          SCUDO is locally manufacturable, eliminating the 70% EU / 90% USA import dependency on Chinese supply chains, while creating local green manufacturing jobs.
+        </p>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+        <h3 class="text-xl font-bold text-gray-900 mb-6">DASRI Disposal Savings</h3>
+        <div class="space-y-4 text-sm">
+          <div class="flex justify-between items-center py-3 border-b border-gray-200">
+            <span class="text-gray-700">DASRI disposal cost eliminated/yr per clinic</span>
+            <span class="font-bold text-primary">€60–€72</span>
+          </div>
+          <div class="flex justify-between items-center py-3 border-b border-gray-200">
+            <span class="text-gray-700">Hazardous waste cost (conventional)</span>
+            <span class="font-bold text-red-400">€800–€1,200/tonne</span>
+          </div>
+          <div class="flex justify-between items-center py-3">
+            <span class="text-gray-700">SCUDO waste cost</span>
+            <span class="font-bold text-primary">€0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Environmental Crisis Context -->
+    <div class="fade-in">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-8 text-center">The Scale of the Crisis</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-red-50 rounded-2xl p-6 border border-red-100 text-center">
+          <div class="text-3xl font-extrabold text-red-400 mb-2">4B</div>
+          <div class="text-sm text-gray-600">Masks trashed annually by GP &amp; dental clinics alone</div>
+        </div>
+        <div class="bg-red-50 rounded-2xl p-6 border border-red-100 text-center">
+          <div class="text-3xl font-extrabold text-red-400 mb-2">82K</div>
+          <div class="text-sm text-gray-600">Tonnes CO₂-eq footprint from manufacturing, transport &amp; disposal</div>
+        </div>
+        <div class="bg-red-50 rounded-2xl p-6 border border-red-100 text-center">
+          <div class="text-3xl font-extrabold text-red-400 mb-2">450+</div>
+          <div class="text-sm text-gray-600">Years masks persist as microplastics in the environment</div>
+        </div>
+        <div class="bg-red-50 rounded-2xl p-6 border border-red-100 text-center">
+          <div class="text-3xl font-extrabold text-red-400 mb-2">16–20B</div>
+          <div class="text-sm text-gray-600">Total masks/year across all healthcare settings</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
