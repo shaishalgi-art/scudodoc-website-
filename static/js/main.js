@@ -38,7 +38,11 @@ function animateCounter(el) {
   function update(now) {
     const progress = Math.min((now - startTs) / duration, 1);
     const eased    = 1 - Math.pow(1 - progress, 3);
-    el.textContent = prefix + (target * eased).toFixed(decimals) + suffix;
+    const num = (target * eased).toFixed(decimals);
+    const formatted = el.dataset.separator
+      ? parseFloat(num).toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
+      : num;
+    el.textContent = prefix + formatted + suffix;
     if (progress < 1) requestAnimationFrame(update);
   }
   requestAnimationFrame(update);
