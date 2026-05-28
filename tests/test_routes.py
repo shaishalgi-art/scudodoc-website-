@@ -34,6 +34,16 @@ def test_contact_returns_200(client):
     assert r.status_code == 200
 
 
+def test_testimonials_returns_200(client):
+    r = client.get('/testimonials')
+    assert r.status_code == 200
+
+
+def test_testimonials_contains_doctor_name(client):
+    r = client.get('/testimonials')
+    assert b'Dr. Eyal Politi' in r.data
+
+
 def test_404_on_unknown_route(client):
     r = client.get('/nonexistent')
     assert r.status_code == 404
