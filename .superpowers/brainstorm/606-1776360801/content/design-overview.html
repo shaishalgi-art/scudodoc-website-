@@ -1,0 +1,103 @@
+<h2>SCUDOdoc Website — Design Overview</h2>
+<p class="subtitle">Architecture, structure & asset plan. Review each section and let me know if anything needs adjusting.</p>
+
+<div class="section">
+  <h3>Architecture: Hybrid Flask App</h3>
+  <p>One rich scrolling homepage (<code>index.html</code>) tells the full investor/product story. Four dedicated sub-pages give depth to Technology, ESG, Market, and Team — linked from the nav. All rendered server-side with Flask + Jinja2. TailwindCSS via CDN (no build step).</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;">
+    <div style="background:#f0fdf9; border:1px solid #1ABC9C33; border-radius:8px; padding:14px;">
+      <div class="label" style="color:#1ABC9C;">Homepage (index.html)</div>
+      <ul style="margin-top:8px; font-size:13px; line-height:1.8;">
+        <li>Confidential banner</li>
+        <li>Sticky nav + mobile menu</li>
+        <li>Hero + product render + stats</li>
+        <li>Problem (6 cards)</li>
+        <li>Solution overview</li>
+        <li>ESG Impact summary</li>
+        <li>Competitive positioning</li>
+        <li>Market overview</li>
+        <li>Team snippets</li>
+        <li>Investment CTA</li>
+        <li>Footer</li>
+      </ul>
+    </div>
+    <div style="background:#f8f9fa; border:1px solid #ddd; border-radius:8px; padding:14px;">
+      <div class="label">Sub-pages</div>
+      <ul style="margin-top:8px; font-size:13px; line-height:1.8;">
+        <li><strong>/technology</strong> — Ion Plasma deep-dive, science table, NAI explanation, video</li>
+        <li><strong>/esg</strong> — Full ESG stats, environmental crisis, ECO-SCUDO program</li>
+        <li><strong>/market</strong> — Market phases, revenue model, projections table</li>
+        <li><strong>/team</strong> — Full team profiles + investment section</li>
+        <li><strong>/contact</strong> — Contact form (mailto)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Visual Style (Option B)</h3>
+  <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+    <div style="display:flex; align-items:center; gap:8px; background:white; border:1px solid #eee; border-radius:6px; padding:8px 14px;">
+      <div style="width:20px; height:20px; border-radius:4px; background:#1ABC9C;"></div>
+      <span style="font-size:13px;">Primary Teal #1ABC9C</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:8px; background:white; border:1px solid #eee; border-radius:6px; padding:8px 14px;">
+      <div style="width:20px; height:20px; border-radius:4px; background:#2E86AB;"></div>
+      <span style="font-size:13px;">Secondary Blue #2E86AB</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:8px; background:white; border:1px solid #eee; border-radius:6px; padding:8px 14px;">
+      <div style="width:20px; height:20px; border-radius:4px; background:#f8fffe; border:1px solid #eee;"></div>
+      <span style="font-size:13px;">Background White/Light</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:8px; background:white; border:1px solid #eee; border-radius:6px; padding:8px 14px;">
+      <div style="width:20px; height:20px; border-radius:4px; background:#333333;"></div>
+      <span style="font-size:13px;">Text Dark Gray #333</span>
+    </div>
+  </div>
+  <p style="margin-top:12px; font-size:13px;">Rounded corners · generous whitespace · teal CTA buttons · subtle card shadows · Inter/system font stack</p>
+</div>
+
+<div class="section">
+  <h3>Real Assets Available</h3>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:10px;">
+    <div style="background:#f8f9fa; border-radius:8px; padding:12px; font-size:12px; text-align:center;">
+      <div style="font-size:24px;">🖼️</div>
+      <strong>Logo</strong><br>SCUDOdoc teal + blue
+    </div>
+    <div style="background:#f8f9fa; border-radius:8px; padding:12px; font-size:12px; text-align:center;">
+      <div style="font-size:24px;">🎭</div>
+      <strong>Hero Render</strong><br>Clear transparent mask
+    </div>
+    <div style="background:#f8f9fa; border-radius:8px; padding:12px; font-size:12px; text-align:center;">
+      <div style="font-size:24px;">👤</div>
+      <strong>Wear Shots</strong><br>Picture1 + Picture2
+    </div>
+    <div style="background:#f8f9fa; border-radius:8px; padding:12px; font-size:12px; text-align:center;">
+      <div style="font-size:24px;">👥</div>
+      <strong>Team Photos</strong><br>Benny, Shai, Michal, Shahak
+    </div>
+    <div style="background:#f8f9fa; border-radius:8px; padding:12px; font-size:12px; text-align:center;">
+      <div style="font-size:24px;">🎬</div>
+      <strong>Product Video</strong><br>2 MP4 files
+    </div>
+    <div style="background:#f8f9fa; border-radius:8px; padding:12px; font-size:12px; text-align:center;">
+      <div style="font-size:24px;">📄</div>
+      <strong>One-Pager PDF</strong><br>Investor content
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Key Technical Decisions</h3>
+  <ul style="font-size:13px; line-height:2;">
+    <li><strong>Contact:</strong> mailto link (benny@scudodoc.com) — no backend needed</li>
+    <li><strong>Video:</strong> HTML5 &lt;video&gt; tag — both MP4 files available</li>
+    <li><strong>Counters:</strong> Intersection Observer API — count up on scroll-into-view</li>
+    <li><strong>Nav:</strong> Sticky · hamburger on mobile · smooth scroll anchors on homepage</li>
+    <li><strong>Confidential banner:</strong> Thin amber/teal top bar on every page</li>
+    <li><strong>Tables:</strong> Responsive — collapse to cards on mobile</li>
+  </ul>
+</div>
+
+<p class="subtitle" style="margin-top:8px;">Does this structure look right? Any sections to add, remove, or reorder?</p>
