@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Testimonials — SCUDOdoc{% endblock %}
+
+{% block content %}
+
+<!-- SECTION 1: PAGE HEADER -->
+<section class="bg-gray-50 py-20 text-center fade-in">
+  <div class="max-w-3xl mx-auto px-6">
+    <p class="text-xs font-bold tracking-widest text-primary uppercase mb-4">From the Field</p>
+    <h1 class="text-5xl font-extrabold text-gray-900 leading-tight">What Professionals Say</h1>
+    <p class="mt-4 text-lg text-gray-500">Real experiences from clinicians using SCUDOdoc every day.</p>
+  </div>
+</section>
+
+<!-- SECTION 2: MAIN SPLIT LAYOUT -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid lg:grid-cols-5 gap-16 items-start fade-in">
+
+      <!-- LEFT: Quote -->
+      <div class="lg:col-span-3">
+        <div class="text-8xl font-extrabold text-primary leading-none mb-2 select-none" style="font-family: Georgia, serif; line-height: 0.8;">&ldquo;</div>
+
+        <blockquote class="text-lg text-gray-700 leading-relaxed space-y-5">
+          <p>I wore the SCUDOdoc mask every day for the whole day for three weeks at the clinic, and I couldn't be happier with it.</p>
+          <p>Breathing is easy and comfortable and it totally eliminated my eye glass fogging — far more than I expected, and definitely compared to a regular medical mask. During the day, I noticed a real difference in my energy levels. Less fatigue, better focus.</p>
+          <p>But what surprised me the most was my patients' reactions. They love it. They tell me they could see my face, hear me clearly, and actually feel my presence — not like I was hidden behind a barrier. It completely changed the dynamic during treatment.</p>
+          <p class="font-semibold text-gray-800">ScudoDoc doesn't just protect — it transforms the care experience, for me and for my patient alike.</p>
+        </blockquote>
+
+        <!-- Byline -->
+        <div class="mt-10 pt-6 border-t-2 border-primary inline-block">
+          <p class="text-xl font-bold text-gray-900">Dr. Eyal Politi</p>
+          <span class="inline-block mt-1 text-sm font-semibold text-primary bg-green-50 px-3 py-1 rounded-full">Dentist</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Photos -->
+      <div class="lg:col-span-2 flex flex-col gap-4">
+        <img
+          src="{{ url_for('static', filename='images/dr-politi-front.jpg') }}"
+          alt="Dr. Eyal Politi wearing the SCUDOdoc mask"
+          class="w-full rounded-2xl shadow-lg object-cover"
+        />
+        <img
+          src="{{ url_for('static', filename='images/dr-politi-side.jpg') }}"
+          alt="Dr. Eyal Politi wearing the SCUDOdoc mask, side profile"
+          class="w-3/4 self-end rounded-xl shadow-md object-cover"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: BOTTOM CTA -->
+<section class="bg-gray-900 py-20 text-center">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-white mb-8">Ready to transform your practice?</h2>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="{{ url_for('contact') }}" class="bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+        Contact Us
+      </a>
+      <a href="{{ url_for('index') }}" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 rounded-lg transition-colors">
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
